@@ -1,12 +1,9 @@
-import { useTheme } from "next-themes";
 import { Bio } from "../../constants";
 import Link from "next/link";
 import { useState, useMemo } from "react";
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const { theme } = useTheme();
-
   const navigationLinks = useMemo(
     () => [
       { text: "About", href: "#about" },
@@ -22,8 +19,8 @@ const Navbar = () => {
     setIsMobileMenuOpen((prevIsMobileMenuOpen) => !prevIsMobileMenuOpen);
   };
 
-  const primaryTextStyles = `text-primary dark:text-white hover:text-primary dark:hover:text-primary`;
-  const githubButtonStyles = `hover:bg-primary dark:hover:text-white transition duration-1000 font-semibold text-while dark:text-primary border-2 border-primary hidden md:flex items-center h-10 rounded-full px-4 ${primaryTextStyles}`;
+  const primaryTextStyles = `text-while dark:text-white hover:text-primary hover:text-primary  dark:hover:text-primary`;
+  const githubButtonStyles = `hidden md:flex border-2 border-primary flex items-center h-10 rounded-full px-4 hover:bg-primary hover:text-white transition duration-1000 font-semibold text-while dark:text-primary dark:hover:text-white`;
 
   const renderNavigationLinks = () =>
     navigationLinks.map(({ text, href }) => (

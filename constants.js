@@ -11,3 +11,4 @@ export const Bio = {
   insta: "https://www.instagram.com/rishav_chanda/",
   facebook: "https://www.facebook.com/rishav.chanda.165/",
 };
+

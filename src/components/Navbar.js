@@ -1,32 +1,32 @@
-import { Bio } from "../../constants";
+import React, { useState } from "react";
 import Link from "next/link";
-import { useState, useMemo } from "react";
+import { Bio } from "../../constants";
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const navigationLinks = useMemo(
-    () => [
-      { text: "About", href: "#about" },
-      { text: "Skills", href: "#skills" },
-      { text: "Experience", href: "#experience" },
-      { text: "Projects", href: "#projects" },
-      { text: "Education", href: "#education" },
-    ],
-    []
-  );
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen((prevIsMobileMenuOpen) => !prevIsMobileMenuOpen);
   };
 
-  const primaryTextStyles = `text-while dark:text-white hover:text-primary hover:text-primary  dark:hover:text-primary`;
-  const githubButtonStyles = `hidden md:flex border-2 border-primary flex items-center h-10 rounded-full px-4 hover:bg-primary hover:text-white transition duration-1000 font-semibold text-while dark:text-primary dark:hover:text-white`;
+  const navigationLinks = [
+    { text: "About", href: "#about" },
+    { text: "Skills", href: "#skills" },
+    { text: "Experience", href: "#experience" },
+    { text: "Projects", href: "#projects" },
+    { text: "Education", href: "#education" },
+  ];
+
+  const primaryTextStyles =
+    "text-white dark:text-white hover:text-primary hover:text-primary dark:hover:text-primary";
+  const githubButtonStyles =
+    "hidden md:flex border-2 border-primary flex items-center h-10 rounded-full px-4 hover:bg-primary hover:text-white transition duration-300 font-semibold text-white dark:text-primary dark:hover:text-white";
 
   const renderNavigationLinks = () =>
     navigationLinks.map(({ text, href }) => (
       <li key={text}>
         <Link href={href}>
-          <span className={primaryTextStyles} onClick={toggleMobileMenu}>
+          <span className={primaryTextStyles} href={href}>
             {text}
           </span>
         </Link>
@@ -55,12 +55,12 @@ const Navbar = () => {
         </a>
 
         <button
-          className={`ml-4 md:hidden border-2 border-primary rounded-full p-2 focus:outline-none`}
+          className="ml-4 md:hidden border-2 border-primary rounded-full p-2 focus:outline-none"
           onClick={toggleMobileMenu}
           aria-label="Toggle Mobile Menu"
         >
           <svg
-            className={`w-6 h-6 text-primary dark:text-white transition duration-200 hover:text-primary dark:hover:text-primary`}
+            className="w-6 h-6 text-primary dark:text-white transition duration-200 hover:text-primary dark:hover:text-primary"
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
@@ -75,22 +75,23 @@ const Navbar = () => {
           </svg>
         </button>
       </div>
-
-      {isMobileMenuOpen && (
-        <div className="md:hidden absolute top-16 right-0 w-full bg-card_light dark:bg-card_dark border-t-2 border-primary">
-          <ul className="flex flex-col items-center gap-4 p-4">
-            {renderNavigationLinks()}
-            <a
-              href={Bio.github}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={`border-2 border-primary flex items-center h-10 rounded-full px-4 ${primaryTextStyles}`}
-            >
-              GitHub Profile
-            </a>
-          </ul>
-        </div>
-      )}
+      <div
+        className={`${
+          isMobileMenuOpen ? "block" : "hidden"
+        } md:hidden absolute top-16 right-0 w-full bg-card_light dark:bg-card_dark border-t-2 border-primary`}
+      >
+        <ul className="flex flex-col items-center gap-4 p-4">
+          {renderNavigationLinks()}
+          <a
+            href={Bio.github}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`border-2 border-primary flex items-center h-10 rounded-full px-4 ${primaryTextStyles}`}
+          >
+            GitHub Profile
+          </a>
+        </ul>
+      </div>
     </nav>
   );
 };

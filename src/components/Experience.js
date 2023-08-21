@@ -7,14 +7,19 @@ import TimelineContent from "@mui/lab/TimelineContent";
 import TimelineDot from "@mui/lab/TimelineDot";
 import ExperienceCard from "./cards/ExperienceCard";
 import { experiences } from "../../constants";
+import { timelineItemClasses } from "@mui/lab";
 
 const Experience = () => {
   const TimelineItemComponent = ({ experience, index }) => (
     <TimelineItem>
       <TimelineSeparator>
-        <TimelineDot className="border-2 border-secondary border-[#6f2380] bg-backgroundPrimary" />
-        {index !== experiences.length - 1 && (
-          <TimelineConnector className="bg-[#854CE6] h-72" />
+        <TimelineDot
+          variant="outlined"
+          color="secondary"
+          className="text-secondary border-secondary"
+        />
+        {index !== experiences.length && (
+          <TimelineConnector className="bg-primary" />
         )}
       </TimelineSeparator>
       <TimelineContent className="py-4 px-6">
@@ -35,8 +40,15 @@ const Experience = () => {
         My work experience as a software engineer and working on different
         companies and projects.
       </p>
-      <div className="w-full">
-        <Timeline>
+      <div className="w-3/5">
+        <Timeline
+          sx={{
+            [`& .${timelineItemClasses.root}:before`]: {
+              flex: 0,
+              padding: 0,
+            },
+          }}
+        >
           {experiences.map((experience, index) => (
             <TimelineItemComponent
               key={index}

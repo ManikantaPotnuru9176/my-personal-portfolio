@@ -6,6 +6,8 @@ import Experience from "@/components/Experience";
 import Projects from "@/components/Projects";
 import Education from "@/components/Education";
 import ProjectDetails from "@/components/ProjectDetails ";
+import Contact from "@/components/Contact";
+import Footer from "@/components/Footer";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 
@@ -26,6 +28,8 @@ export default function Home() {
         <Experience />
         <Projects openModal={openModal} setOpenModal={setOpenModal} />{" "}
         <Education />
+        <Contact />
+        <Footer />
         {openModal.state && (
           <ProjectDetails openModal={openModal} setOpenModal={setOpenModal} />
         )}

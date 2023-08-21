@@ -24,7 +24,10 @@ const Experience = () => {
   );
 
   return (
-    <div className="relative flex justify-center items-center flex-col w-full max-w-1100 gap-12">
+    <div
+      id="experience"
+      className="relative flex justify-center items-center flex-col w-full max-w-1100 gap-12"
+    >
       <h1 className="text-4xl font-semibold mt-20 text-primary md:text-5xl">
         Experience
       </h1>

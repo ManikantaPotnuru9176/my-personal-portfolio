@@ -4,7 +4,6 @@ export const Bio = {
   description:
     "I am a motivated and versatile individual, always eager to take on new challenges. With a passion for learning I am dedicated to delivering high-quality results. With a positive attitude and a growth mindset, I am ready to make a meaningful contribution and achieve great things.",
   github: "https://github.com/ManikantaPotnuru9176",
-  resume: "/_next/static/files/Resume.pdf",
   linkedin: "https://www.linkedin.com/in/manikantapotnuru/",
   twitter: "https://twitter.com/MANIKANTAPOTNU5",
   insta: "https://www.instagram.com/manikantapotnuru9176/",
@@ -168,5 +167,88 @@ export const experiences = [
       "JavaScript",
     ],
     doc: "",
+  },
+];
+
+export const projects = [
+  {
+    id: 0,
+    title: "TodoInstant",
+    date: "Aug 2023 - Sep 2023",
+    description:
+      "Crafted a responsive and real-time todo list application using React, Axios, and toast notifications. Enabled users to seamlessly create, edit, and manage their tasks with instant feedback on every action. Implemented toast notifications for loading, success, and error states during CRUD operations, enhancing user interaction. Utilized nanoid for unique task IDs and practiced modern development techniques to ensure a dynamic and engaging user experience.",
+    image: "https://example.com/todo-instant-screenshot.png",
+    tags: ["React", "Axios"],
+    category: "web app",
+    github: "https://github.com/your-username/todo-instant",
+    webapp: "https://your-web-app-link.com/",
+    member: [
+      {
+        name: "Your Name",
+        img: "https://avatars.githubusercontent.com/your-avatar-image-link.png",
+        linkedin: "https://www.linkedin.com/in/your-linkedin-profile/",
+        github: "https://github.com/your-github-profile/",
+      },
+    ],
+  },
+  {
+    id: 1,
+    title: "Chakra UI Todo List",
+    date: "Aug 2023 - Sep 2023",
+    description:
+      "Developed a responsive and user-friendly todo list application using React and Chakra UI. Implemented features for adding, editing, completing, and deleting tasks. Utilized Chakra UI components for consistent styling and layout. Enabled users to seamlessly manage their tasks with interactive buttons for task actions. Leveraged modern state management techniques for a dynamic user experience.",
+    image: "https://example.com/chakra-ui-todo-screenshot.png",
+    tags: ["React", "Chakra UI"],
+    category: "web app",
+    github: "https://github.com/your-username/chakra-ui-todo",
+    webapp: "https://your-web-app-link.com/",
+    member: [
+      {
+        name: "Your Name",
+        img: "https://avatars.githubusercontent.com/your-avatar-image-link.png",
+        linkedin: "https://www.linkedin.com/in/your-linkedin-profile/",
+        github: "https://github.com/your-github-profile/",
+      },
+    ],
+  },
+  {
+    id: 2,
+    title: "Weather App",
+    date: "Sep 2023 - Oct 2023",
+    description:
+      "Developed a weather application that enables users to retrieve real-time weather information for specified cities. Utilized the RapidAPI platform to access weather data from external APIs. Designed an intuitive user interface for users to input their desired city and receive current weather conditions, temperature, humidity, wind speed, and more. Enhanced user experience by displaying weather icons corresponding to different weather conditions.",
+    image: "https://example.com/weather-app-screenshot.png",
+    tags: ["React", "API Integration", "User Interface"],
+    category: "web app",
+    github: "https://github.com/your-username/weather-app",
+    webapp: "https://your-weather-app-link.com/",
+    member: [
+      {
+        name: "Your Name",
+        img: "https://avatars.githubusercontent.com/your-avatar-image-link.png",
+        linkedin: "https://www.linkedin.com/in/your-linkedin-profile/",
+        github: "https://github.com/your-github-profile/",
+      },
+    ],
+  },
+  {
+    id: 2,
+    title: "Search",
+    date: "Aug 2023 - Sep 2023",
+    description:
+      "Developed a music and media search application using React and Axios, allowing users to search for albums, artists, episodes, genres, playlists, podcasts, tracks, and users across various media platforms. Utilized the Spotify23 API to fetch and display search results with dynamic sections for different media types. Implemented error handling for search queries and provided users with links to access the media directly. Practiced modern UI/UX techniques to ensure an engaging and intuitive search experience.",
+    image: "https://example.com/search-screenshot.png",
+    tags: ["React", "Axios", "API Integration"],
+    category: "web app",
+    github: "https://github.com/your-username/search-app",
+    webapp: "https://your-web-app-link.com/",
+    member: [
+      {
+        name: "Your Name",
+        img: "https://avatars.githubusercontent.com/your-avatar-image-link.png",
+        linkedin: "https://www.linkedin.com/in/your-linkedin-profile/",
+        github: "https://github.com/your-github-profile/",
+      },
+    ],
   },
 ];

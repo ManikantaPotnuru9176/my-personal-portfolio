@@ -3,7 +3,7 @@ import React from "react";
 const ProjectCard = ({ project, setOpenModal }) => {
   return (
     <div
-      className="w-80 h-auto dark:bg-[#171721] cursor-pointer rounded-lg shadow-lg overflow-hidden p-4 flex flex-col gap-2 transition-transform duration-500 ease-in-out transform hover:-translate-y-2 hover:shadow-2xl hover:brightness-110"
+      className="w-80 h-auto dark:bg-[#15151e] cursor-pointer rounded-lg shadow-lg overflow-hidden p-4 flex flex-col gap-2 transition-transform duration-500 ease-in-out transform hover:-translate-y-2 hover:shadow-2xl hover:brightness-110"
       onClick={() => setOpenModal({ state: true, project: project })}
     >
       <img

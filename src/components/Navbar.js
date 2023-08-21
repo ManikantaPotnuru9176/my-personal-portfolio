@@ -3,11 +3,7 @@ import Link from "next/link";
 import { Bio } from "../../constants";
 
 const Navbar = () => {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
-  const toggleMobileMenu = () => {
-    setIsMobileMenuOpen((prevIsMobileMenuOpen) => !prevIsMobileMenuOpen);
-  };
+  const [mobileViewOpen, setMobileViewOpen] = useState(false);
 
   const navigationLinks = [
     { text: "About", href: "#about" },
@@ -17,80 +13,71 @@ const Navbar = () => {
     { text: "Education", href: "#education" },
   ];
 
-  const primaryTextStyles =
-    "text-white dark:text-white hover:text-primary hover:text-primary dark:hover:text-primary";
-  const githubButtonStyles =
-    "hidden md:flex border-2 border-primary flex items-center h-10 rounded-full px-4 hover:bg-primary hover:text-white transition duration-300 font-semibold text-white dark:text-primary dark:hover:text-white";
-
-  const renderNavigationLinks = () =>
-    navigationLinks.map(({ text, href }) => (
-      <li key={text}>
-        <Link href={href}>
-          <span className={primaryTextStyles} href={href}>
-            {text}
-          </span>
-        </Link>
-      </li>
-    ));
-
   return (
-    <nav className="bg-white dark:bg-backgroundNavbar px-6 py-8 ring-1 ring-slate-900/5 shadow-xl h-16 flex items-center justify-center font-semibold sticky top-0 z-10 transition duration-300 ease-in-out">
-      <div className="max-w-6xl mx-auto flex justify-between items-center w-full px-6">
-        <Link href="/">
-          <span className="w-12 h-12 flex items-center justify-center border-2 border-primary rounded-full text-black dark:text-white transition duration-200">
+    <nav className="bg-white dark:bg-backgroundPrimary fixed w-full z-20 top-0 left-0 dark:border-gray-600">
+      <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+        <Link href="/" className="flex items-center">
+          <span className="w-14 h-14 flex items-center justify-center border-2 border-primary rounded-full text-black self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
             MP
           </span>
         </Link>
-
-        <ul className="hidden md:flex gap-8">{renderNavigationLinks()}</ul>
-
-        <a
-          href={Bio.github}
-          target="_blank"
-          rel="noopener noreferrer"
-          className={githubButtonStyles}
-          aria-label="GitHub Profile"
-        >
-          GitHub Profile
-        </a>
-
-        <button
-          className="ml-4 md:hidden border-2 border-primary rounded-full p-2 focus:outline-none"
-          onClick={toggleMobileMenu}
-          aria-label="Toggle Mobile Menu"
-        >
-          <svg
-            className="w-6 h-6 text-primary dark:text-white transition duration-200 hover:text-primary dark:hover:text-primary"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M4 6h16M4 12h16M4 18h16"
-            />
-          </svg>
-        </button>
-      </div>
-      <div
-        className={`${
-          isMobileMenuOpen ? "block" : "hidden"
-        } md:hidden absolute top-16 right-0 w-full bg-card_light dark:bg-card_dark border-t-2 border-primary`}
-      >
-        <ul className="flex flex-col items-center gap-4 p-4">
-          {renderNavigationLinks()}
+        <div className="flex md:order-2">
           <a
             href={Bio.github}
             target="_blank"
-            rel="noopener noreferrer"
-            className={`border-2 border-primary flex items-center h-10 rounded-full px-4 ${primaryTextStyles}`}
+            rel="noopener"
+            aria-label="Github Profile"
+            className="border-2 border-primary flex items-center h-10 rounded-full px-4 transition duration-500 text-primary dark:hover:text-white dark:hover:bg-primary"
           >
-            GitHub Profile
+            Github Profile
           </a>
-        </ul>
+          <button
+            data-collapse-toggle="navbar-sticky"
+            type="button"
+            className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+            aria-controls="navbar-sticky"
+            aria-expanded={mobileViewOpen ? "true" : "false"}
+            onClick={() => setMobileViewOpen(!mobileViewOpen)}
+          >
+            <span className="sr-only">Open main menu</span>
+            <svg
+              className="w-5 h-5"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 17 14"
+            >
+              <path
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M1 1h15M1 7h15M1 13h15"
+              />
+            </svg>
+          </button>
+        </div>
+        <div
+          className={`items-center justify-between w-full md:flex md:w-auto md:order-1 ${
+            mobileViewOpen ? "block" : "hidden"
+          }`}
+          id="navbar-sticky"
+        >
+          <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium border border-backgroundPrimary rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-backgroundPrimary md:dark:bg-backgroundPrimary dark:border-primary">
+            {navigationLinks.map(({ text, href }) => (
+              <li key={text}>
+                <Link
+                  href={href}
+                  className="block py-2 pl-3 pr-4 text-black transition duration-300 dark:text-white rounded md:bg-transparent md:text-primary md:p-0 md:hover:text-primary md:hover:dark:text-primary"
+                  aria-current="page"
+                  onClick={() => setMobileViewOpen(!mobileViewOpen)}
+                >
+                  {text}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </nav>
   );

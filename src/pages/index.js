@@ -1,6 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
-import About from "@/components/About";
+// import About from "@/components/About";
 import Skills from "@/components/Skills";
 import Experience from "@/components/Experience";
 import Projects from "@/components/Projects";
@@ -16,11 +16,11 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="bg-white dark:bg-backgroundNavbar">
+    <div className="bg-white dark:bg-backgroundPrimary">
       <Navbar />
-      <div className="max-w-6xl mx-auto px-4 pt-16">
+      <div className="max-w-8xl mx-auto px-4 flex flex-col items-center">
         <Hero />
-        <About />
+        {/* <About /> */}
         <Skills />
         <Experience />
         <Projects />

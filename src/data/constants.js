@@ -201,7 +201,7 @@ export const projects = [
     tags: ["React", "Axios"],
     category: "web app",
     github: "https://github.com/ManikantaPotnuru9176/todo-using-strapi",
-    webapp: "https://your-web-app-link.com/",
+    webapp: "https://todo-using-strapi.vercel.app/",
     member: [
       {
         name: "Manikanta Potnuru",
@@ -221,7 +221,7 @@ export const projects = [
     tags: ["React", "Chakra UI"],
     category: "web app",
     github: "https://github.com/ManikantaPotnuru9176/todo-using-chakra",
-    webapp: "https://your-web-app-link.com/",
+    webapp: "https://todo-using-chakra.vercel.app/",
     member: [
       {
         name: "Manikanta Potnuru",
@@ -241,7 +241,7 @@ export const projects = [
     tags: ["React", "API Integration", "User Interface"],
     category: "web app",
     github: "https://github.com/ManikantaPotnuru9176/weather-by-city-name",
-    webapp: "https://your-weather-app-link.com/",
+    webapp: "https://weather-by-city-name.vercel.app/",
     member: [
       {
         name: "Manikanta Potnuru",
@@ -261,7 +261,7 @@ export const projects = [
     tags: ["React", "Axios", "API Integration"],
     category: "web app",
     github: "https://github.com/ManikantaPotnuru9176/spotify-search",
-    webapp: "https://your-web-app-link.com/",
+    webapp: "https://spotify-search-gold.vercel.app/",
     member: [
       {
         name: "Manikanta Potnuru",

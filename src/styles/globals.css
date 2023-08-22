@@ -13,9 +13,12 @@
 
 ::-webkit-scrollbar-track {
   background-color: #191924;
-  border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #7062f2;
+  background: #7062f2;
+}
+
+* {
+  scroll-behavior: smooth;
 }

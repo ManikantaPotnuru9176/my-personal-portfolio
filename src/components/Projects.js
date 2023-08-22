@@ -12,12 +12,12 @@ const Projects = ({ openModal, setOpenModal }) => {
   ];
 
   return (
-    <div
-      id="projects"
-      className="dark:bg-backgroundPrimary from-white via-[#8c3bce0a] to-transparent flex flex-col items-center justify-center relative z-1 clip-path-[polygon(0% 0%,100% 0%,100% 100%,100% 98%,0% 100%)]"
-    >
+    <div className="dark:bg-backgroundPrimary from-white via-[#8c3bce0a] to-transparent flex flex-col items-center justify-center relative z-1 py-16">
       <div className="w-full max-w-7xl py-10 px-6 md:py-16 md:px-10">
-        <div className="flex flex-col items-center text-center lg:text-left">
+        <div
+          id="projects"
+          className="flex flex-col items-center text-center lg:text-left"
+        >
           <h1 className="text-4xl font-semibold mt-20 text-primary md:text-5xl">
             Projects
           </h1>

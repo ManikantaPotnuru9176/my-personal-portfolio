@@ -22,7 +22,9 @@ const Education = () => {
           className="text-secondary border-secondary"
         />
         {index !== education.length - 1 && (
-          <TimelineConnector className="bg-primary py-36" />
+          <TimelineConnector
+            sx={{ backgroundColor: "#854ce6", height: "300px" }}
+          />
         )}
       </TimelineSeparator>
     </TimelineItem>

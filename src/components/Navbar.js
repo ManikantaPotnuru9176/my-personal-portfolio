@@ -68,7 +68,7 @@ const Navbar = () => {
               <li key={text}>
                 <Link
                   href={href}
-                  className="block py-2 pl-3 pr-4 text-black transition duration-300 dark:text-white rounded md:bg-transparent md:text-primary md:p-0 md:hover:text-primary md:hover:dark:text-primary"
+                  className="block py-2 pl-3 pr-4 text-black transition duration-300 dark:text-white rounded md:bg-transparent md:text-primary md:p-0 md:hover:text-primary md:hover:dark:text-primary "
                   aria-current="page"
                   onClick={() => setMobileViewOpen(!mobileViewOpen)}
                 >

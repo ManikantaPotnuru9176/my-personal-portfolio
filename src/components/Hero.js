@@ -2,7 +2,6 @@ import React from "react";
 import Typewriter from "typewriter-effect";
 import { Bio } from "@/data/constants";
 import HeroBgAnimation from "./HeroBgAnimation";
-import Resume from "@/pdf/Resume.pdf";
 
 const Hero = () => {
   const { name, roles, description } = Bio;
@@ -34,7 +33,7 @@ const Hero = () => {
             {description}
           </p>
           <a
-            href={Resume}
+            href="/Resume.pdf"
             target="_blank"
             rel="noreferrer"
             className="md:py-4 px-4 md:px-8 transition duration-300 inline-block appearance-none w-[95%] max-w-[300px] text-center py-4 text-white bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-lg cursor-pointer font-semibold text-lg transition-transform transition-shadow hover:scale-105 hover:shadow-xl hover:brightness-100 hover:shadow-xl hover:scale-105 focus:outline-none"

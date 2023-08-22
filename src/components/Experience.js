@@ -13,13 +13,9 @@ const Experience = () => {
   const TimelineExperienceItem = ({ experience, index }) => (
     <TimelineItem>
       <TimelineSeparator>
-        <TimelineDot
-          variant="outlined"
-          color="secondary"
-          className="text-secondary border-secondary"
-        />
+        <TimelineDot variant="outlined" color="secondary" />
         {index !== experiences.length && (
-          <TimelineConnector className="bg-primary py-36" />
+          <TimelineConnector sx={{ backgroundColor: "#854ce6", height: "300px" }} />
         )}
       </TimelineSeparator>
       <TimelineContent className="py-4 px-6">

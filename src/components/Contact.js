@@ -28,7 +28,7 @@ const Contact = () => {
 
   return (
     <div className="flex flex-col justify-center items-center relative z-1">
-      <div className="flex flex-col justify-between items-center flex-col w-full max-w-1350px px-0 gap-12 py-0 md:py-80">
+      <div className="flex flex-col justify-between items-center flex-col w-full max-w-1350px gap-12 py-0 md:py-32">
         <div className="text-4xl text-center font-semibold mt-20 md:text-5xl text-primary">
           Contact
         </div>
@@ -70,7 +70,7 @@ const Contact = () => {
             required
           />
           <input
-            className="w-full text-center bg-gradient-to-r from-[#0066FF] via-transparent to-[#9400E1] py-3 px-4 mt-8 rounded-lg text-lg font-semibold cursor-pointer"
+            className="w-full text-center bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 py-3 px-4 mt-8 rounded-lg text-lg font-semibold cursor-pointer"
             type="submit"
             value="Send"
           />

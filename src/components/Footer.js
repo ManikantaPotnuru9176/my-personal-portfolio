@@ -3,7 +3,7 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import InstagramIcon from "@mui/icons-material/Instagram";
-import { Bio } from "../../constants";
+import { Bio } from "@/data/constants";
 
 const Footer = () => {
   const socialLinks = [
@@ -22,9 +22,9 @@ const Footer = () => {
   ];
 
   return (
-    <div className="w-full bg-[#15151e] py-8 flex justify-center">
-      <div className="max-w-7xl flex flex-col items-center text-white px-4">
-        <h1 className="font-semibold text-xl md:text-2xl mb-2">
+    <div className="w-full bg-[#15151e] py-8 px-0 flex justify-center">
+      <div className="max-w-7xl flex flex-col items-center text-white px-0">
+        <h1 className="font-semibold text-xl md:text-2xl mb-2 text-primary">
           Manikanta Potnuru
         </h1>
         <nav className="max-w-md w-full flex flex-wrap justify-center gap-4 text-lg md:text-xl mb-4">
@@ -51,7 +51,7 @@ const Footer = () => {
             </a>
           ))}
         </div>
-        <p className="text-sm md:text-base text-gray-300 text-center">
+        <p className="text-sm md:text-base text-gray-500 text-center">
           &copy; 2023 Manikanta Potnuru. All rights reserved.
         </p>
       </div>

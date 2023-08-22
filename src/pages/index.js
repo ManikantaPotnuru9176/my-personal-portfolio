@@ -20,9 +20,9 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="bg-white dark:bg-backgroundPrimary">
+    <div className="bg-white dark:bg-backgroundPrimary scrollbar-thin scrollbar-thumb-gray-500 scrollbar-track-gray-300">
       <Navbar />
-      <div className="max-w-8xl mx-auto px-4 flex flex-col items-center">
+      <div className="max-w-8xl mx-auto flex flex-col items-center">
         <Hero />
         <Skills />
         <Experience />

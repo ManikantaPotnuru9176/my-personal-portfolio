@@ -1,5 +1,5 @@
 import React from "react";
-import { skills } from "../../constants";
+import { skills } from "@/data/constants";
 
 const Skills = () => {
   return (
@@ -30,7 +30,11 @@ const Skills = () => {
                     key={subIndex}
                     className="flex items-center border rounded-lg py-2 px-4 text-primary-80 border-primary-80"
                   >
-                    <img src={item.image} alt={item.name} className="w-6 h-6" />
+                    <img
+                      src={item.image}
+                      alt={item.name}
+                      className="w-6 h-6 rounded-sm mr-2"
+                    />
                     <span>{item.name}</span>
                   </div>
                 ))}

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Link from "next/link";
-import { Bio } from "../../constants";
+import { Bio } from "@/data/constants";
 
 const Navbar = () => {
   const [mobileViewOpen, setMobileViewOpen] = useState(false);

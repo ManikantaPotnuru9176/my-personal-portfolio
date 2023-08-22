@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import ProjectCard from "./cards/ProjectCard";
-import { projects } from "../../constants";
+import { projects } from "../data/constants";
 
 const Projects = ({ openModal, setOpenModal }) => {
   const [toggle, setToggle] = useState("all");

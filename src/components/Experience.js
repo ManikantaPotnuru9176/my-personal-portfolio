@@ -6,11 +6,11 @@ import TimelineConnector from "@mui/lab/TimelineConnector";
 import TimelineContent from "@mui/lab/TimelineContent";
 import TimelineDot from "@mui/lab/TimelineDot";
 import ExperienceCard from "./cards/ExperienceCard";
-import { experiences } from "../../constants";
+import { experiences } from "@/data/constants";
 import { timelineItemClasses } from "@mui/lab";
 
 const Experience = () => {
-  const TimelineItemComponent = ({ experience, index }) => (
+  const TimelineExperienceItem = ({ experience, index }) => (
     <TimelineItem>
       <TimelineSeparator>
         <TimelineDot
@@ -19,7 +19,7 @@ const Experience = () => {
           className="text-secondary border-secondary"
         />
         {index !== experiences.length && (
-          <TimelineConnector className="bg-primary" />
+          <TimelineConnector className="bg-primary py-36" />
         )}
       </TimelineSeparator>
       <TimelineContent className="py-4 px-6">
@@ -50,7 +50,7 @@ const Experience = () => {
           }}
         >
           {experiences.map((experience, index) => (
-            <TimelineItemComponent
+            <TimelineExperienceItem
               key={index}
               experience={experience}
               index={index}

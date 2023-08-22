@@ -5,11 +5,29 @@ import TimelineSeparator from "@mui/lab/TimelineSeparator";
 import TimelineConnector from "@mui/lab/TimelineConnector";
 import TimelineContent from "@mui/lab/TimelineContent";
 import TimelineDot from "@mui/lab/TimelineDot";
-import { education } from "../../constants";
+import { education } from "@/data/constants";
 import EducationCard from "./cards/EducationCard";
 import { timelineItemClasses } from "@mui/lab";
 
 const Education = () => {
+  const TimelineEducationItem = ({ education, index }) => (
+    <TimelineItem>
+      <TimelineContent className="md:py-4 md:px-6">
+        <EducationCard education={education} />
+      </TimelineContent>
+      <TimelineSeparator>
+        <TimelineDot
+          variant="outlined"
+          color="secondary"
+          className="text-secondary border-secondary"
+        />
+        {index !== education.length - 1 && (
+          <TimelineConnector className="bg-primary py-36" />
+        )}
+      </TimelineSeparator>
+    </TimelineItem>
+  );
+
   return (
     <div id="education" className="relative">
       <div className="flex flex-col items-center md:text-left">
@@ -30,21 +48,11 @@ const Education = () => {
             }}
           >
             {education.map((education, index) => (
-              <TimelineItem key={index}>
-                <TimelineContent className="md:py-4 md:px-6">
-                  <EducationCard education={education} />
-                </TimelineContent>
-                <TimelineSeparator>
-                  <TimelineDot
-                    variant="outlined"
-                    color="secondary"
-                    className="text-secondary border-secondary"
-                  />
-                  {index !== education.length - 1 && (
-                    <TimelineConnector className="bg-primary" />
-                  )}
-                </TimelineSeparator>
-              </TimelineItem>
+              <TimelineEducationItem
+                key={index}
+                education={education}
+                index={index}
+              />
             ))}
           </Timeline>
         </div>

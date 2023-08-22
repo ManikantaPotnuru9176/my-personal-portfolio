@@ -2,7 +2,7 @@ export const Bio = {
   name: "Manikanta Potnuru",
   roles: ["Full Stack Developer", "Programmer"],
   description:
-    "I am a motivated and versatile individual, always eager to take on new challenges. With a passion for learning I am dedicated to delivering high-quality results. With a positive attitude and a growth mindset, I am ready to make a meaningful contribution and achieve great things.",
+    "I'm someone who embraces challenges, values continuous learning, and is committed to delivering top-quality results. With a positive attitude and a growth mindset, I'm prepared to make a meaningful contribution and achieve remarkable things, all while adapting to new opportunities along the way.",
   github: "https://github.com/ManikantaPotnuru9176",
   linkedin: "https://www.linkedin.com/in/manikantapotnuru/",
   twitter: "https://twitter.com/MANIKANTAPOTNU5",
@@ -91,6 +91,31 @@ export const skills = [
     ],
   },
   {
+    title: "Programming Languages",
+    skills: [
+      {
+        name: "C",
+        image:
+          "https://w7.pngwing.com/pngs/465/779/png-transparent-blue-and-white-c-logo-the-c-programming-language-computer-programming-computer-icons-programmer-blue-angle-computer.png",
+      },
+      {
+        name: "C++",
+        image:
+          "https://w7.pngwing.com/pngs/46/626/png-transparent-c-logo-the-c-programming-language-computer-icons-computer-programming-source-code-programming-miscellaneous-template-blue.png",
+      },
+      {
+        name: "Java",
+        image:
+          "https://banner2.cleanpng.com/20180426/kbw/kisspng-computer-icons-java-%E5%92%96%E5%95%A1%E6%B5%B7%E6%8A%A5%E5%9B%BE%E7%89%87%E7%B4%A0%E6%9D%90-5ae2595f709d26.2774016315247834554613.jpg",
+      },
+      {
+        name: "Python",
+        image:
+          "https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg",
+      },
+    ],
+  },
+  {
     title: "Others",
     skills: [
       {
@@ -122,11 +147,6 @@ export const skills = [
         name: "Postman",
         image:
           "https://camo.githubusercontent.com/93b32389bf746009ca2370de7fe06c3b5146f4c99d99df65994f9ced0ba41685/68747470733a2f2f7777772e766563746f726c6f676f2e7a6f6e652f6c6f676f732f676574706f73746d616e2f676574706f73746d616e2d69636f6e2e737667",
-      },
-      {
-        name: "Adobe XD",
-        image:
-          "https://camo.githubusercontent.com/c205ecbe12500177d102169d97bc1c17c545155fdf5ec78c08d54ac53e5b38c1/68747470733a2f2f63646e2e776f726c64766563746f726c6f676f2e636f6d2f6c6f676f732f61646f62652d78642e737667",
       },
       {
         name: "Figma",

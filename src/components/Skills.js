@@ -1,5 +1,6 @@
 import React from "react";
 import { skills } from "@/data/constants";
+import Image from "next/image";
 
 const Skills = () => {
   return (
@@ -30,7 +31,7 @@ const Skills = () => {
                     key={subIndex}
                     className="flex items-center border rounded-lg py-2 px-4 text-primary-80 border-primary-80"
                   >
-                    <img
+                    <Image
                       src={item.image}
                       alt={item.name}
                       className="w-6 h-6 rounded-sm mr-2"

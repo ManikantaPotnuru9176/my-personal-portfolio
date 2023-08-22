@@ -27,8 +27,11 @@ const Contact = () => {
   };
 
   return (
-    <div className="flex flex-col justify-center items-center relative z-1">
-      <div className="flex flex-col justify-between items-center flex-col w-full max-w-1350px gap-12 py-0 md:py-32">
+    <div className="flex flex-col justify-center items-center relative z-1 md:py-32">
+      <div
+        id="contact"
+        className="flex flex-col justify-between items-center flex-col w-full max-w-1350px gap-12 py-0"
+      >
         <div className="text-4xl text-center font-semibold mt-20 md:text-5xl text-primary">
           Contact
         </div>

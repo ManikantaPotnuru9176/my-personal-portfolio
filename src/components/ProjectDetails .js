@@ -10,9 +10,15 @@ const ProjectDetails = ({ openModal, setOpenModal }) => {
       open={true}
       onClose={() => setOpenModal({ state: false, project: null })}
     >
-      <div className="w-full h-full fixed top-0 left-0 overflow-y-auto">
+      <div
+        className="w-full h-full fixed top-0 left-0 overflow-y-auto"
+        onClick={() => setOpenModal({ state: false, project: null })}
+      >
         <div className="flex items-center justify-center min-h-screen">
-          <div className="dark:bg-[#171721] max-w-2xl w-full mx-6 my-12 bg-card rounded-lg p-6 relative">
+          <div
+            className="dark:bg-[#171721] max-w-2xl w-full mx-6 my-12 bg-card rounded-lg p-6 relative"
+            onClick={(e) => e.stopPropagation()}
+          >
             <CloseRounded
               className="absolute top-3 right-6 cursor-pointer"
               onClick={() => setOpenModal({ state: false, project: null })}

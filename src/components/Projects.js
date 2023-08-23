@@ -22,8 +22,8 @@ const Projects = ({ openModal, setOpenModal }) => {
             Projects
           </h1>
           <p className="text-lg text-secondary text-center max-w-lg mt-6">
-            I have worked on a wide range of projects. From web apps to android
-            apps. Here are some of my projects.
+            I have worked on a wide range of projects. Here are some of my
+            projects.
           </p>
           <div className="flex items-center gap-2 mt-6">
             {toggleButtons.map((button) => (

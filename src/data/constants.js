@@ -160,16 +160,6 @@ export const skills = [
 export const experiences = [
   {
     id: 0,
-    img: "",
-    role: "Software Engineer Trainee",
-    company: " Inflolabs Pvt. Ltd.",
-    date: "Nov 2022 - Mar 2023",
-    desc: "Working on Revidd Platforms, managing a micro service.",
-    skills: ["Java", "Spring Boot", "GraphQL"],
-    doc: "",
-  },
-  {
-    id: 1,
     img: "https://media.licdn.com/dms/image/C560BAQFQb9_Lb3bZug/company-logo_200_200/0/1644414857251?e=1693440000&v=beta&t=7WqhIiUCg_0otFDwWn-O_SP-Z4Ftoe4be1WlnjYoESc",
     role: "React Developer",
     company: "ConetntQL",
@@ -186,6 +176,16 @@ export const experiences = [
       "CSS",
       "JavaScript",
     ],
+    doc: "",
+  },
+  {
+    id: 1,
+    img: "",
+    role: "Software Engineer Trainee",
+    company: " Inflolabs Pvt. Ltd.",
+    date: "Nov 2022 - Mar 2023",
+    desc: "Working on Revidd Platforms, managing a micro service.",
+    skills: ["Java", "Spring Boot", "GraphQL"],
     doc: "",
   },
 ];

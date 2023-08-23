@@ -12,7 +12,7 @@ const Skills = () => {
           Skills
         </h1>
         <p className="text-lg text-secondary text-center max-w-lg">
-          Here are some of my skills on which I have been working for the past 2
+          Here are some of my skills on which I have been working for the past 4
           years.
         </p>
         <div className="w-full flex flex-wrap mt-4 justify-center gap-10">

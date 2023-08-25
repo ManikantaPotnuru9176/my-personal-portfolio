@@ -253,7 +253,7 @@ export const projects = [
   },
   {
     id: 3,
-    title: "Search",
+    title: "Spotify Search",
     date: "Jun 2023 - Jul 2023",
     description:
       "Developed a music and media search application using React and Axios, allowing users to search for albums, artists, episodes, genres, playlists, podcasts, tracks, and users across various media platforms. Utilized the Spotify23 API to fetch and display search results with dynamic sections for different media types. Implemented error handling for search queries and provided users with links to access the media directly. Practiced modern UI/UX techniques to ensure an engaging and intuitive search experience.",
@@ -262,6 +262,26 @@ export const projects = [
     category: "web app",
     github: "https://github.com/ManikantaPotnuru9176/spotify-search",
     webapp: "https://spotify-search-gold.vercel.app/",
+    member: [
+      {
+        name: "Manikanta Potnuru",
+        img: "https://avatars.githubusercontent.com/u/110469998?v=4",
+        linkedin: "https://www.linkedin.com/in/manikantapotnuru/",
+        github: "https://github.com/ManikantaPotnuru9176/",
+      },
+    ],
+  },
+  {
+    id: 4,
+    title: "GitHub Search",
+    date: "Jun 2023 - Jul 2023",
+    description:
+      "Developed a GitHub user search application using React and Axios. Users can search for GitHub users and view their followers, following, and repositories. The application fetches data from the GitHub API and presents it in an organized manner. Implemented a toggleable color mode feature using Chakra UI for a better user experience.",
+    image: "/github-search.png",
+    tags: ["React", "Axios", "Chakra UI", "API Integration"],
+    category: "web app",
+    github: "https://github.com/ManikantaPotnuru9176/github-search",
+    webapp: "https://github-search-mauve-eight.vercel.app/",
     member: [
       {
         name: "Manikanta Potnuru",

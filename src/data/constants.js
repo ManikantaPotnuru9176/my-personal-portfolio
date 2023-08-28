@@ -311,6 +311,26 @@ export const projects = [
       },
     ],
   },
+  {
+    id: 5,
+    title: "Orders Drag-and-Drop",
+    date: "Aug 2023 - Aug 2023",
+    description:
+      "Implemented a drag-and-drop functionality for managing orders using React and Chakra UI. Users can categorize orders into different sections such as New Orders, In Progress, Waiting for Buyer, and Completed. The drag-and-drop feature allows users to easily change the status of orders between sections for efficient order management.",
+    image: "/orders-dnd.png",
+    tags: ["React", "Chakra UI", "react-dnd"],
+    category: "web app",
+    github: "https://github.com/ManikantaPotnuru9176/orders-dnd/",
+    webapp: "https://orders-dnd.vercel.app/",
+    members: [
+      {
+        name: "Manikanta Potnuru",
+        img: "https://avatars.githubusercontent.com/u/110469998?v=4",
+        linkedin: "https://www.linkedin.com/in/manikantapotnuru/",
+        github: "https://github.com/ManikantaPotnuru9176/",
+      },
+    ],
+  },
 ];
 
 export const education = [

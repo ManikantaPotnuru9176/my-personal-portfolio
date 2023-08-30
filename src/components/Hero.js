@@ -3,7 +3,7 @@ import Typewriter from "typewriter-effect";
 import { Bio } from "@/data/constants";
 import HeroBgAnimation from "./HeroBgAnimation";
 
-const Hero = () => {
+const Hero = () => {  
   const { name, roles, description } = Bio;
 
   return (
@@ -29,14 +29,14 @@ const Hero = () => {
               />
             </span>
           </div>
-          <p className="text-sm md:text-base lg:text-lg text-textPrimary dark:text-white mb-4 md:mb-6 lg:mb-8">
+          <p className="text-sm md:text-base lg:text-lg dark:text-white mb-4 md:mb-6 lg:mb-8">
             {description}
           </p>
           <a
             href="/Resume.pdf"
             target="_blank"
             rel="noreferrer"
-            className="md:py-4 px-4 md:px-8 transition duration-300 inline-block appearance-none w-[95%] max-w-[300px] text-center py-4 text-white bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-lg cursor-pointer font-semibold text-lg transition-transform transition-shadow hover:scale-105 hover:shadow-xl hover:brightness-100 hover:shadow-xl hover:scale-105 focus:outline-none"
+            className="py-2 md:py-4 md:px-8 md:transition md:duration-300 inline-block appearance-none w-[95%] max-w-[300px] text-center text-white bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-lg cursor-pointer font-semibold text-lg md:transition-transform md:transition-shadow md:hover:brightness-100 md:hover:shadow-xl md:hover:scale-105 md:focus:outline-none"
           >
             Check Resume
           </a>

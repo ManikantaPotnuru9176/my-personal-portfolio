@@ -28,7 +28,7 @@ const Navbar = () => {
             target="_blank"
             rel="noopener"
             aria-label="Github Profile"
-            className="border-2 border-primary flex items-center h-10 rounded-full px-4 transition duration-500 text-primary dark:hover:text-white dark:hover:bg-primary"
+            className="border-2 border-primary flex items-center h-10 rounded-full px-4 md:transition duration-500 text-primary md:dark:hover:text-white md:dark:hover:bg-primary"
           >
             Github Profile
           </a>

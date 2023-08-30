@@ -32,20 +32,20 @@ const Footer = () => {
             <a
               key={index}
               href={link.href}
-              className="text-white hover:text-primary transition-colors duration-300"
+              className="text-white md:hover:text-primary md:transition-colors md:duration-300"
             >
               {link.label}
             </a>
           ))}
         </nav>
-        <div className="flex space-x-4 text-2xl md:text-3xl mb-4">
+        <div className="flex space-x-6 md:space-x-4 text-2xl md:text-3xl mb-4">
           {socialLinks.map((social, index) => (
             <a
               key={index}
               href={social.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-white hover:text-primary transition-colors duration-300"
+              className="text-white md:hover:text-primary md:transition-colors md:duration-300"
             >
               {social.icon}
             </a>

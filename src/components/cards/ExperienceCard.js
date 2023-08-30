@@ -4,7 +4,7 @@ const ExperienceCard = ({ experience }) => {
   const { role, company, date, desc, skills } = experience;
 
   return (
-    <div className="w-650 rounded-lg shadow-md p-8 gap-12 transition duration-300 ease-in-out transform hover:shadow-xl hover:-translate-y-5 border border-[#306ee8]">
+    <div className="w-650 rounded-lg shadow-md p-4 md:p-8 gap-12 transition duration-300 ease-in-out md:transform md:hover:shadow-xl md:hover:-translate-y-5 border border-[#306ee8]">
       <div className="flex flex-col">
         <div className="text-18 font-semibold text-[#ffffff99]">{role}</div>
         <div className="text-14 font-medium text-[#AEB3C099]">{company}</div>

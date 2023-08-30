@@ -202,7 +202,7 @@ export const projects = [
     category: "web app",
     github: "https://github.com/ManikantaPotnuru9176/todo-using-strapi",
     webapp: "https://todo-using-strapi.vercel.app/",
-    member: [
+    members: [
       {
         name: "Manikanta Potnuru",
         img: "https://avatars.githubusercontent.com/u/110469998?v=4",
@@ -222,7 +222,7 @@ export const projects = [
     category: "web app",
     github: "https://github.com/ManikantaPotnuru9176/todo-using-chakra",
     webapp: "https://todo-using-chakra.vercel.app/",
-    member: [
+    members: [
       {
         name: "Manikanta Potnuru",
         img: "https://avatars.githubusercontent.com/u/110469998?v=4",
@@ -242,7 +242,7 @@ export const projects = [
     category: "web app",
     github: "https://github.com/ManikantaPotnuru9176/weather-by-city-name",
     webapp: "https://weather-by-city-name.vercel.app/",
-    member: [
+    members: [
       {
         name: "Manikanta Potnuru",
         img: "https://avatars.githubusercontent.com/u/110469998?v=4",
@@ -262,7 +262,7 @@ export const projects = [
     category: "web app",
     github: "https://github.com/ManikantaPotnuru9176/spotify-search",
     webapp: "https://spotify-search-gold.vercel.app/",
-    member: [
+    members: [
       {
         name: "Manikanta Potnuru",
         img: "https://avatars.githubusercontent.com/u/110469998?v=4",
@@ -282,7 +282,7 @@ export const projects = [
     category: "web app",
     github: "https://github.com/ManikantaPotnuru9176/github-search",
     webapp: "https://github-search-mauve-eight.vercel.app/",
-    member: [
+    members: [
       {
         name: "Manikanta Potnuru",
         img: "https://avatars.githubusercontent.com/u/110469998?v=4",
@@ -312,7 +312,7 @@ export const projects = [
     ],
   },
   {
-    id: 5,
+    id: 6,
     title: "Orders Drag-and-Drop",
     date: "Aug 2023 - Aug 2023",
     description:

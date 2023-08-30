@@ -1,9 +1,14 @@
 import { CloseRounded, GitHub, LinkedIn } from "@mui/icons-material";
 import { Modal } from "@mui/material";
-import React from "react";
+import React, { useState } from "react";
 
 const ProjectDetails = ({ openModal, setOpenModal }) => {
   const project = openModal?.project;
+  const [expanded, setExpanded] = useState(false);
+
+  const toggleExpansion = () => {
+    setExpanded(!expanded);
+  };
 
   return (
     <Modal
@@ -11,12 +16,12 @@ const ProjectDetails = ({ openModal, setOpenModal }) => {
       onClose={() => setOpenModal({ state: false, project: null })}
     >
       <div
-        className="w-full h-full fixed top-0 left-0 overflow-y-auto"
+        className="w-full h-full fixed top-0 left-0 overflow-y-auto backdrop-blur-sm"
         onClick={() => setOpenModal({ state: false, project: null })}
       >
         <div className="flex items-center justify-center min-h-screen">
           <div
-            className="dark:bg-[#171721] max-w-2xl w-full mx-6 my-12 bg-card rounded-lg p-6 relative"
+            className="dark:bg-[#171721] max-w-2xl w-full mx-6 my-12 bg-card rounded-lg p-4 md:p-6 relative"
             onClick={(e) => e.stopPropagation()}
           >
             <CloseRounded
@@ -41,24 +46,39 @@ const ProjectDetails = ({ openModal, setOpenModal }) => {
               ))}
             </div>
             <div className="text-base font-normal mt-4">
-              {project?.description}
+              <div
+                className={`${
+                  expanded ? "line-clamp-none" : "line-clamp-2 md:line-clamp-3"
+                } transition-all`}
+              >
+                {project?.description}
+              </div>
+              <button
+                className="text-primary text-sm md:text-md md:hover:underline md:focus:outline-none"
+                onClick={toggleExpansion}
+              >
+                {expanded ? "Read less" : "Read more"}
+              </button>
             </div>
-            {project.member && (
+
+            {project.members && (
               <>
                 <div className="text-2xl font-semibold mt-6">Members</div>
                 <div className="flex flex-col gap-2 mt-3">
-                  {project?.member.map((member, index) => (
-                    <div key={index} className="flex items-center gap-3">
+                  {project?.members.map((member, index) => (
+                    <div key={index} className="flex items-center gap-2">
                       <img
                         src={member.img}
                         alt="Member"
                         className="w-12 h-12 rounded-full object-cover shadow-md"
                       />
-                      <div className="text-base font-medium">{member.name}</div>
+                      <div className="text-base font-medium pr-6">
+                        {member.name}
+                      </div>
                       <a
                         href={member.github}
                         target="new"
-                        className="text-primary"
+                        className="text-primary pr-2"
                       >
                         <GitHub />
                       </a>
@@ -74,18 +94,18 @@ const ProjectDetails = ({ openModal, setOpenModal }) => {
                 </div>
               </>
             )}
-            <div className="flex justify-end mt-4 space-x-4">
+            <div className="flex justify-end mt-6 md:mt-4 space-x-16 md:space-x-4">
               <a
                 href={project?.github}
                 target="new"
-                className="text-text_primary font-semibold rounded-md px-4 py-2 bg-primary hover:bg-primary_hover transition-all duration-500 ease"
+                className="text-text_primary font-semibold rounded-md px-2 md:px-4 py-2 bg-primary md:hover:bg-primary_hover md:transition-all md:duration-500 ease"
               >
                 View Code
               </a>
               <a
                 href={project?.webapp}
                 target="new"
-                className="text-text_primary font-semibold rounded-md px-4 py-2 bg-primary hover:bg-primary_hover transition-all duration-500 ease"
+                className="text-text_primary font-semibold rounded-md px-2 md:px-4 py-2 bg-primary md:hover:bg-primary_hover md:transition-all md:duration-500 ease"
               >
                 View Live App
               </a>

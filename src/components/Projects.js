@@ -25,7 +25,7 @@ const Projects = ({ openModal, setOpenModal }) => {
             I have worked on a wide range of projects. Here are some of my
             projects.
           </p>
-          <div className="flex items-center gap-2 mt-6">
+          <div className="flex md:items-center gap-2 mt-6">
             {toggleButtons.map((button) => (
               <button
                 key={button.value}

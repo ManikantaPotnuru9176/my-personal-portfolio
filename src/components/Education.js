@@ -36,11 +36,11 @@ const Education = () => {
         <h1 className="text-4xl font-semibold mt-20 text-primary md:text-5xl">
           Education
         </h1>
-        <p className="text-lg text-secondary text-center max-w-lg mt-6">
+        <p className="text-lg text-secondary text-center max-w-lg mt-6 px-2 md:px-0">
           My education has been a journey of self-discovery and growth. My
           educational details are as follows.
         </p>
-        <div className="w-4/5 pt-12">
+        <div className="md:w-4/5 pt-12">
           <Timeline
             sx={{
               [`& .${timelineItemClasses.root}:before`]: {
@@ -48,6 +48,7 @@ const Education = () => {
                 padding: 0,
               },
             }}
+            className="p-2 md:px-16 md:py-6"
           >
             {education.map((education, index) => (
               <TimelineEducationItem

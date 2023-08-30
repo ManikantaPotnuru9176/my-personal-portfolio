@@ -5,7 +5,7 @@ const EducationCard = ({ education }) => {
     <div className="w-full rounded-lg shadow-md p-2 md:p-8 gap-12 transition duration-300 ease-in-out transform hover:shadow-xl hover:-translate-y-5 border border-[#306ee8]">
       <div className="flex flex-col">
         <div className="flex items-center gap-3">
-          <div className="h-12 w-[50px] md:w-12 bg-black rounded-lg">
+          <div className="h-[60px] md:h-12 w-[80px] md:w-12 bg-black rounded-lg">
             <img
               src={education.img}
               alt="Education"

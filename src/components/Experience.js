@@ -15,10 +15,12 @@ const Experience = () => {
       <TimelineSeparator>
         <TimelineDot variant="outlined" color="secondary" />
         {index !== experiences.length && (
-          <TimelineConnector sx={{ backgroundColor: "#854ce6", height: "300px" }} />
+          <TimelineConnector
+            sx={{ backgroundColor: "#854ce6", height: "300px" }}
+          />
         )}
       </TimelineSeparator>
-      <TimelineContent className="py-4 px-6">
+      <TimelineContent className="md:py-4 md:px-6">
         <ExperienceCard experience={experience} />
       </TimelineContent>
     </TimelineItem>
@@ -36,7 +38,7 @@ const Experience = () => {
         My work experience as a software engineer and working on different
         companies and projects.
       </p>
-      <div className="w-3/5">
+      <div className="md:w-3/5">
         <Timeline
           sx={{
             [`& .${timelineItemClasses.root}:before`]: {
@@ -44,6 +46,7 @@ const Experience = () => {
               padding: 0,
             },
           }}
+          className="p-2 md:px-16 md:py-6"
         >
           {experiences.map((experience, index) => (
             <TimelineExperienceItem

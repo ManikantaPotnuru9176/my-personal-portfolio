@@ -4,12 +4,27 @@ import { projects } from "../data/constants";
 
 const Projects = ({ openModal, setOpenModal }) => {
   const [toggle, setToggle] = useState("all");
+  const [showAllProjects, setShowAllProjects] = useState(false);
 
   const toggleButtons = [
     { value: "all", label: "All" },
     { value: "web app", label: "WEB APPS" },
     { value: "machine learning", label: "MACHINE LEARNING" },
   ];
+
+  const filteredProjects =
+    toggle === "all"
+      ? projects
+      : projects.filter((project) => project.category === toggle);
+
+  const displayedProjects = showAllProjects
+    ? filteredProjects
+    : filteredProjects.slice(0, 3);
+
+  const handleToggleButton = (buttonValue) => {
+    setToggle(buttonValue);
+    setShowAllProjects(false);
+  };
 
   return (
     <div className="dark:bg-backgroundPrimary from-white via-[#8c3bce0a] to-transparent flex flex-col items-center justify-center relative z-1 py-16">
@@ -34,7 +49,7 @@ const Projects = ({ openModal, setOpenModal }) => {
                     ? "bg-primary text-white"
                     : "bg-[#1c1c27] text-primary border border-primary"
                 } hover:bg-primary_hover transition-all duration-500 ease-in-out`}
-                onClick={() => setToggle(button.value)}
+                onClick={() => handleToggleButton(button.value)}
               >
                 {button.label}
               </button>
@@ -44,26 +59,25 @@ const Projects = ({ openModal, setOpenModal }) => {
       </div>
       <div className="flex flex-col items-center">
         <div className="w-full max-w-7xl flex flex-wrap justify-center gap-8">
-          {toggle === "all"
-            ? projects.map((project, index) => (
+          {displayedProjects.length === 0
+            ? "No projects !"
+            : displayedProjects.map((project, index) => (
                 <ProjectCard
                   key={index}
                   project={project}
                   openModal={openModal}
                   setOpenModal={setOpenModal}
                 />
-              ))
-            : projects
-                .filter((item) => item.category === toggle)
-                .map((project, index) => (
-                  <ProjectCard
-                    key={index}
-                    project={project}
-                    openModal={openModal}
-                    setOpenModal={setOpenModal}
-                  />
-                ))}
+              ))}
         </div>
+        {filteredProjects.length > 3 && (
+          <button
+            className="mt-12 rounded-lg font-semibold text-md hover:underline underline-offset-2 text-primary border w-[300px] md:w-[400px] py-1 hover:border-primary transition duration-300 ease-in-out"
+            onClick={() => setShowAllProjects(!showAllProjects)}
+          >
+            {showAllProjects ? "Show Less" : "Show More"}
+          </button>
+        )}
       </div>
     </div>
   );
